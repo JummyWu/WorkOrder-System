@@ -3,8 +3,8 @@ import os
 import sys
 
 if __name__ == "__main__":
-    profile = os.environ.get('WORDSYSTEM_PROFILE', 'base')
-    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "wordsystem.settings.%s" % profile)
+    profile = os.environ.get('WORKSYSTEM_PROFILE', 'base')
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "worksystem.settings.%s" % profile)
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:

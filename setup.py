@@ -1,11 +1,11 @@
 # coding:utf-8
 from setuptools import setup, find_packages
 
-packages = find_packages('wordsystem')
+packages = find_packages('worksystem')
 print(packages)
 
 setup(
-    name='wordsystem',
+    name='worksystem',
     version='0.1',
     decription='work system',
     author='jummy, nishuidey',
@@ -19,6 +19,6 @@ setup(
         'python-decouple-3.1',
     ],
     scripts=[
-        'wordsystem/manage.py',
+        'worksystem/manage.py',
     ],
 )
