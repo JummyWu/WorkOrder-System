@@ -16,7 +16,7 @@ setup(
     include_package_data=True,
     install_requires=[
         'django==2.0.5',
-        'python-decouple-3.1',
+        'python-decouple==3.1',
     ],
     scripts=[
         'worksystem/manage.py',
