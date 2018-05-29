@@ -17,6 +17,7 @@ setup(
     install_requires=[
         'django==2.0.5',
         'python-decouple==3.1',
+        'mysqlclient==1.3.12',
     ],
     scripts=[
         'worksystem/manage.py',

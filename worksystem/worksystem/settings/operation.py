@@ -2,7 +2,7 @@
 # @Time    : 2018/5/29 17:00
 # @Author  : nishuideyu
 
-from .base import *
+from .base import *  # NOQA
 from decouple import config
 
 DEBUG = config('DEBUG', default=True, cast=bool)
@@ -17,4 +17,3 @@ DATABASES = {
         'PORT': config('DB_PORT')
     }
 }
-

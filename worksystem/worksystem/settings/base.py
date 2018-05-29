@@ -21,6 +21,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'worksystem',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
