@@ -24,7 +24,7 @@ class Order(models.Model):
     # 客户
     customer = models.ForeignKey(Customer, verbose_name='客户', on_delete=models.CASCADE)
     # 存放位置
-    #location = models
+    # location = models
 
     class Meta:
         ordering = ['-order_time']
@@ -36,5 +36,3 @@ class Order(models.Model):
 
     def __str__(self):
         return self.version
-
-
