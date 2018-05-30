@@ -1,5 +1,6 @@
 # coding:utf-8
 import os
+import sys
 
 from decouple import config
 
@@ -22,6 +23,9 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'worksystem',
+    'customer',
+    'order',
+    'warehouse',
 
     'django.contrib.admin',
     'django.contrib.auth',
@@ -90,15 +94,15 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-hans'       # 修改语言为中文
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'      # 修改时区为中国时区
 
 USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
