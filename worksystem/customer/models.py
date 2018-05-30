@@ -8,8 +8,7 @@ class Customer(models.Model):
     batch_number = models.CharField(max_length=100, verbose_name='批号')
 
     class Meta:
-        verbose_name = '客户信息'
-        verbose_name_plural = verbose_name
+        verbose_name_plural = verbose_name = '客户信息'
 
     def __str__(self):
         return self.company_name
