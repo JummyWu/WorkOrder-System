@@ -2,13 +2,19 @@
 
 from django.db import models
 
-from customer import Customer
+from customer.models import Customer
 
 
 class Warehouse(models.Model):
     '''
     仓库
     '''
+    STATUS_CHOICES = (
+        ('making', '制作中'),
+        ('complete', '已完成'),
+        ('outbound', '已出库'),
+    )
+
     batch_number = models.CharField(max_length=50, verbose_name='批号')
     customer = models.ForeignKey(Customer, verbose_name='客户')
     version = models.CharField(max_length=100, verbose_name='型号')
@@ -18,10 +24,25 @@ class Warehouse(models.Model):
     height = models.IntegerField(max_length=10, verbose_name='高')
     parties = models.IntegerField(max_length=10, verbose_name='方数')
     meters = models.IntegerField(max_length=10, verbose_name='米数')
-    add_tiem = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
+    product_time = models.DateTimeField(auto_now_add=True, verbose_name='计划生产日期')
+    ship_time = models.DateTimeField(auto_now_add=True, verbose_name='出货日期')
+    status = models.CharField(choices=STATUS_CHOICES, default='making', verbose_name='出货明细')
+    add_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
+
+    class Meta:
+        verbose_name_plural = verbose_name = '仓库信息'
 
     def __str__(self):
         return self.version
 
-    class Meta:
-        verbose_name = verbose_name_plural = '仓库信息'
+
+
+
+
+
+
+
+
+
+
+
